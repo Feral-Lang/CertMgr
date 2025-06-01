@@ -1,0 +1,9 @@
+let logging = import('std/logging');
+let argparse = import('std/argparse');
+
+let args = argparse.new();
+args.add('version', 'v').setHelp('Display program version');
+args.add('help', 'h').setHelp('Display this program help');
+args.add('force', 'f').setHelp('Force the operation - in case of install, will reinstall a package if it\'s already installed');
+args.add('keep', 'k').setHelp('Keep the intermediate files (downloads) when installing packages');
+args.parse(feral.args);
